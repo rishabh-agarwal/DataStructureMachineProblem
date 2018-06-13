@@ -1,0 +1,18 @@
+Prof. Harlan Russell
+ECE 223, MP1, Fall 2013
+test1 empty list
+designed for a list size of 5
+
+STATS
+FIND 0
+DEL 0
+PRINT
+
+Output must be:
+/    Number records: 0, Array size: 5
+/    Did not find: 0
+/    Did not remove: 0
+/    List empty
+/    Goodbye
+QUIT
+

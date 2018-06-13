@@ -1,0 +1,12 @@
+Non-option argument run
+Seed: 341
+
+----- Access driver -----
+  Access trials: 50000
+  Levels for tree: 16
+  Build random tree with size=65535
+  After access exercise, time=30, tree size=65535
+    Expect successful search=39.799, measured=39.7923, trials=25066
+    Expect unsuccessful search=42.7983, measured=42.7527, trials=24934
+----- End of access driver -----
+

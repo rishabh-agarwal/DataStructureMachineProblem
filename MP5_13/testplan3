@@ -1,0 +1,12 @@
+Non-option argument run
+Seed: 341
+
+----- Access driver -----
+  Access trials: 50000
+  Levels for tree: 16
+  Build poor tree with size=65535
+  After access exercise, time=60, tree size=65535
+    Expect successful search=269.996, measured=268.717, trials=25063
+    Expect unsuccessful search=272.992, measured=274.098, trials=24937
+----- End of access driver -----
+

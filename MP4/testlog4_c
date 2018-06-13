@@ -1,0 +1,25 @@
+Seed: 54321
+First-fit search policy starting at rover using coalescing
+The size of chunk_t is 8 bytes
+Size of Chunk_t 8first allocation of 4792 bytes p=0x8681d48 
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x867f000
+p=0x867f000, size=512, end=0x8680000, next=0x8681000
+p=0x8681000, size=424, end=0x8681d40, next=0x804e0a4
+second allocation of 952 bytes p=0x867fc48
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x867f000
+p=0x867f000, size=392, end=0x867fc40, next=0x8681000
+p=0x8681000, size=424, end=0x8681d40, next=0x804e0a4
+fourth allocation of 152 bytes p=0x867fba8
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x867f000
+p=0x867f000, size=372, end=0x867fba0, next=0x8681000
+p=0x8681000, size=424, end=0x8681d40, next=0x804e0a4
+first free of p=0x8681d48 
+p=0x8681000, size=1024, end=0x8683000, next=0x804e0a4
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x867f000
+p=0x867f000, size=372, end=0x867fba0, next=0x8681000
+second free of p=0x867fba8 
+p=0x867f000, size=392, end=0x867fc40, next=0x8681000
+p=0x8681000, size=1024, end=0x8683000, next=0x804e0a4
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x867f000
+
+----- End unit test driver 1 -----

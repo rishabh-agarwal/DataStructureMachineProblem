@@ -1,0 +1,30 @@
+Seed: 54321
+First-fit search policy starting at rover without coalescing
+
+Equilibrium test driver using Mem_alloc and Mem_free from mem.c
+  Trials in equilibrium: 100000
+  Warmup allocations: 1000
+  Average array size: 128
+  Range for average array size: 127
+Size of Chunk_t 8After warmup
+
+ Toatal number of Chunks in free list: 87
+Min Size: 0.00 Max Size: 1696.00 Average Size: 39.080
+Total Memory in list: 3400
+Calls to sbrk: 129, Pages Requested: 129
+After exercise, time=10120
+
+ Toatal number of Chunks in free list: 50879
+Min Size: 0.00 Max Size: 2136.00 Average Size: 201.572
+Total Memory in list: 10255792
+Calls to sbrk: 2630, Pages Requested: 2630
+After cleanup
+
+ Toatal number of Chunks in free list: 51877
+Min Size: 0.00 Max Size: 2136.00 Average Size: 207.656
+Total Memory in list: 10772480
+Calls to sbrk: 2630, Pages Requested: 2630
+
+ All memory is in heap - no leaks are possible 
+----- End of equilibrium test -----
+

@@ -1,0 +1,37 @@
+First Fit unit driver 1
+Non-option argument run
+Non-option argument first
+Seed: 54321
+First-fit search policy starting at rover without coalescing
+Size of Chunk_t 8first allocation of 792 bytes p=0x8ad2cf0 
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x8ad2000
+p=0x8ad2000, size=413, end=0x8ad2ce8, next=0x804e0a4
+second allocation of 392 bytes p=0x8ad2b68
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x8ad2000
+p=0x8ad2000, size=364, end=0x8ad2b60, next=0x804e0a4
+third allocation of 2888 bytes p=0x8ad2020
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x8ad2000
+p=0x8ad2000, size=3, end=0x8ad2018, next=0x804e0a4
+fourth allocation of 1016 bytes p=0x8ad3c10
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x8ad2000
+p=0x8ad2000, size=3, end=0x8ad2018, next=0x8ad3000
+p=0x8ad3000, size=385, end=0x8ad3c08, next=0x804e0a4
+first free of p=0x8ad2cf0 
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x8ad2ce8
+p=0x8ad2ce8, size=99, end=0x8ad3000, next=0x8ad2000
+p=0x8ad2000, size=3, end=0x8ad2018, next=0x8ad3000
+p=0x8ad3000, size=385, end=0x8ad3c08, next=0x804e0a4
+second free of p=0x8ad2020 
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x8ad2018
+p=0x8ad2018, size=361, end=0x8ad2b60, next=0x8ad2ce8
+p=0x8ad2ce8, size=99, end=0x8ad3000, next=0x8ad2000
+p=0x8ad2000, size=3, end=0x8ad2018, next=0x8ad3000
+p=0x8ad3000, size=385, end=0x8ad3c08, next=0x804e0a4
+third and fourth free of p=0x8ad2b68 and 0x8ad3c10
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x8ad3c08
+p=0x8ad3c08, size=127, end=0x8ad4000, next=0x8ad2b60
+p=0x8ad2b60, size=49, end=0x8ad2ce8, next=0x8ad2018
+p=0x8ad2018, size=361, end=0x8ad2b60, next=0x8ad2ce8
+p=0x8ad2ce8, size=99, end=0x8ad3000, next=0x8ad2000
+p=0x8ad2000, size=3, end=0x8ad2018, next=0x8ad3000
+p=0x8ad3000, size=385, end=0x8ad3c08, next=0x804e0a4

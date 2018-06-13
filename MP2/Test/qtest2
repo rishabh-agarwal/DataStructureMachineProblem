@@ -1,0 +1,22 @@
+Prof. Harlan Russell
+ECE 223, MP2, Fall 2013
+qtest2 single insert no leak
+
+ADDTAIL 111
+100
+200
+T
+WEP
+b
+2.4
+2
+54.2
+1
+STATS
+
+Output must be:
+/    Added to tail: 111
+/    Number records in list: 0 in queue: 1
+/    Goodbye
+QUIT
+

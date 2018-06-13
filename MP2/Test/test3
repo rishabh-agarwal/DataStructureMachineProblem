@@ -1,0 +1,36 @@
+Prof. Harlan Russell
+ECE 223, MP1, Fall 2013
+test3 single replace no leak
+
+ADD 111
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+1
+ADD 111
+101
+201
+T
+WEP
+d
+2.4
+1
+1.3
+2
+STATS
+PRINT
+
+Output must be:
+/    Inserted: 111
+/    Updated: 111
+/    Number records: 1, Array size: 5
+/    1 records
+/    1: eth: 111, MIP: 101, AID: 201, Auth: T, Pri: WEP, ..., Time: 2
+/    Goodbye
+QUIT
+

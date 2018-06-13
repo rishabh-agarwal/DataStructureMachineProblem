@@ -1,0 +1,11 @@
+Seed: 341
+
+----- Access driver -----
+  Access trials: 50000
+  Levels for tree: 16
+  Build worst tree with size=4180
+  After access exercise, time=0, tree size=4180
+    Expect successful search=22.067, measured=22.0627, trials=24860
+    Expect unsuccessful search=25.061, measured=25.0547, trials=25140
+----- End of access driver -----
+

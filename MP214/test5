@@ -1,0 +1,124 @@
+Prof. Harlan Russell
+ECE 223, MP1, Spring 2014
+test5 11 inserts, 3 removes, 1 insert
+designed for a list size of 4
+
+INSERT 3
+1
+1
+1
+1
+1
+1
+5
+INSERT 1
+1
+1
+1
+1
+1
+1
+6
+INSERT 7
+1
+1
+1
+1
+1
+1
+7
+INSERT 10
+1
+1
+1
+1
+1
+1
+8
+INSERT 6
+1
+1
+1
+1
+1
+1
+9
+INSERT 7
+1
+1
+1
+1
+1
+1
+10
+INSERT 7
+1
+1
+1
+1
+1
+1
+11
+INSERT 8
+1
+1
+1
+1
+1
+1
+12
+INSERT 8
+1
+1
+1
+1
+1
+1
+13
+INSERT 10
+1
+1
+1
+1
+1
+1
+14
+INSERT 8
+1
+1
+1
+1
+1
+1
+15
+
+First 11 inserts same as in test4
+
+# TEST remove the sets 7, 8, and 10
+
+REMOVE 8
+REMOVE 7
+REMOVE 10
+
+/    Removed 3 packets matching 8
+/    Removed 3 packets matching 7
+/    Removed 2 packets matching 10
+
+# TEST add a new last item
+
+INSERT 15
+1
+1
+1
+1
+1
+1
+16
+PRINT
+
+/    11 records
+/    1: Dest IP: 1, Src: 1, ..., Time: 6
+/    2: Dest IP: 3, Src: 1, ..., Time: 5
+/    3: Dest IP: 6, Src: 1, ..., Time: 9
+/    4: Dest IP: 15, Src: 1, ..., Time: 16
+QUIT

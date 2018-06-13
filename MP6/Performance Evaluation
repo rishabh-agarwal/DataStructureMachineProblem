@@ -1,0 +1,11 @@
+Performance Evaluation 
+
+ Please look at testlogPE#
+ 
+ 1.a For Graph two the complexity is O(n^2) beacuse if the number of vertices are n the the number of comparision with the vertices will not be n, it will be double i.e n^2. Therefore the complexity is O(n^2).
+ If compare testlogPE1 and testlogPE2 we can easily say with N/2 number of vertices the ratio of the number of the vertices is 4.
+ b. TestlogPE3
+ 
+ 2.TestlogPE4, The complexity is O(nlogn).
+ 
+ 3. The graph is not connected as testlogPE5 and testlogPE5

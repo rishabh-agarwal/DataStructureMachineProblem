@@ -1,0 +1,17 @@
+Prof. Harlan Russell
+ECE 223, MP2, Fall 2013
+qtest1 empty queue
+
+STATS
+DELHEAD
+PRINTQ
+DELMAX
+
+Output must be:
+/    Number records: 0 queue size: 0
+/    Did not remove: queue empty
+/    Queue empty
+/    No deletions, queue empty
+/    Goodbye
+QUIT
+

@@ -1,0 +1,61 @@
+Welcome to lab2. Using list size: 1
+# Prof. Harlan Russell
+# ECE 223, MP1, Spring 2014
+# test2 4 inserts and removes
+# designed for a list size of 4
+# 
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 10 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 9 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 8 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 7 into list
+# 
+# Output must be:
+# /    Added: 10
+# /    Added: 9
+# /    Added: 8
+# /    Added: 7
+1: Dest IP: 7, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 4
+2: Dest IP: 8, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 3
+3: Dest IP: 9, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 2
+4: Dest IP: 10, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 1
+List contains 4 records.
+
+# 
+# /    4 records
+# /    1: Dest IP: 7, Src: 1, ..., Time: 4
+# /    2: Dest IP: 8, Src: 1, ..., Time: 3
+# /    3: Dest IP: 9, Src: 1, ..., Time: 2
+# /    4: Dest IP: 10, Src: 1, ..., Time: 1
+# 
+Removed 1 packets matching 10
+Removed 1 packets matching 7
+# 
+# /    Removed 1 packets matching 10
+# /    Removed 1 packets matching 7
+# 
+1: Dest IP: 8, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 3
+2: Dest IP: 9, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 2
+List contains 2 records.
+
+# 
+# /    2 records
+# /    1: Dest IP: 8, Src: 1, ..., Time: 3
+# /    2: Dest IP: 9, Src: 1, ..., Time: 2
+# 
+Removed 1 packets matching 8
+Removed 1 packets matching 9
+# 
+# /    Removed 1 packets matching 8
+# /    Removed 1 packets matching 9
+# 
+List is empty
+
+# 
+# /    List empty
+# /    cleanup
+# 
+Goodbye

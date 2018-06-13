@@ -1,0 +1,21 @@
+Welcome to lab2. Using list size: 1
+# Prof. Harlan Russell
+# ECE 223, MP1, Spring 2014
+# test1 empty list
+# designed for a list size of 4
+# 
+Did not find: 1
+A set with address -1 has 0 packets
+Scan found no records with >= 10 matches
+Did not remove: 1
+List is empty
+
+# 
+# 
+# Output must be:
+# /    Did not find: 1
+# /    No records with >= 10 matches
+# /    Did not remove: 1
+# /    List empty
+# /    cleanup
+Goodbye

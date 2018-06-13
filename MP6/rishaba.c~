@@ -1,0 +1,307 @@
+//Rishabh Agarwal
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+#include "dijkstras.h"
+#define pie 3.14
+#define infinity 87654
+
+
+
+void construct(home *node_ptr,int graphchoice,int V,int rover_ptr)
+ {
+	int incr;
+	node_ptr->graphchoice = graphchoice;
+	node_ptr->V = V;
+	node_ptr->node_length = (double *)malloc (V * sizeof (double));
+	node_ptr->path= (int *)malloc(V * sizeof(int));
+	node_ptr->graph_matrx = (double **)malloc (V * sizeof (double*));
+	for(incr=0;i<V;incr++)
+	{
+		node_ptr->graph_matrx[incr]=(double *)malloc (V * sizeof(double));
+	}
+ }
+/* this function destructs all the allocation done and frees all the memory */
+void destruct (home *node_ptr , int rover_ptr)
+{
+int incr;
+for(incr=0;incr < node_ptr->V;incr++)
+   {
+   free(node_ptr->graph_matrx[incr]);
+   }
+free(node_ptr->graph_matrx);
+free(node_ptr->path);
+free(node_ptr->node_length);
+}
+
+
+/* this function implements the graph constructed in construct function */
+
+void graph(home*node_ptr, int graphchoice , int V, int approx_vertices, int rover_ptr)
+{
+	int incr;
+	int incr2;
+	
+	node_ptr->graphchoice=graphchoice;
+	if(graphchoice == 1)
+	{
+	      for(incr=0;incr<V;incr++)
+	      {
+		    for(incr2=0;incr2<V;incr2++)
+		    {
+		    	node_ptr->graph_matrx[incr][incr2]= infinity;
+ 	          if(incr==incr2)
+		 	  {
+		 		node_ptr->graph_matrx[incr][incr2]=0;
+		 	  }
+		    }
+	      }	
+	      	
+	      
+	      node_ptr->graph_matrx[1][2]=3;
+	      node_ptr->graph_matrx[1][6]=5;
+	      node_ptr->graph_matrx[2][3]=7;
+	      node_ptr->graph_matrx[2][4]=3;
+	      node_ptr->graph_matrx[2][6]=10;
+	      node_ptr->graph_matrx[3][4]=5;
+	      node_ptr->graph_matrx[3][5]=1;
+	      node_ptr->graph_matrx[4][5]=6;
+	      node_ptr->graph_matrx[5][6]=7;
+	      node_ptr->graph_matrx[6][0]=4;
+	      node_ptr->graph_matrx[6][3]=8;
+	      node_ptr->graph_matrx[6][4]=9;
+	      
+	 }
+	 
+   if(graphchoice==2)
+	{
+	    
+    	 for(incr=0;incr<V;incr++)
+    	 {
+    	  for(incr2=0;incr2<V;incr2++)
+    	  {
+			node_ptr->graph_matrx[incr][incr2]= abs((incr-incr2)) + pow(((i-j) + 3),2) + 5*j;
+    	   if(incr==incr2)
+    	    node_ptr->graph_matrx[incr][incr2]=0;
+          }
+        }  
+    
+   }
+   
+ if(graphchoice==3)
+{
+
+ int incr,incr2,min=infinity,max=0,ptr;
+ double d,total,mean;
+  vertex array[V];
+  array[0].vertex1=0;
+  array[0].vertex2=0.5;
+  
+  array[V-1].vertex1=1;
+  array[V-1].vertex2=0.5;
+    for(incr=1;incr<V-1;incr++) 
+	      {
+	      array[incr].vertex1=drand48();
+	      array[incr].vertex2=drand48();
+	      }
+ double c,m,f;
+c= sqrt ((approx_vertices/(V*pie)));
+ m= log10(1+ pow((1/c),2));
+for(incr=0;incr<V;incr++)
+{
+ for(incr2=0;incr2<V;incr2++)
+ {
+   d = sqrt((pow((array[incr].vertex1 - array[incr2].vertex1),2)) + (pow((array[vertex1].vertex2 - array[vertex2].vertex2),2))); 
+  if(incr==incr2)
+  node_ptr->graph_matrx[incr][incr2]=0;
+  else if(d<=c)
+  {
+  
+  f= log10(1+(pow(1/(d+(c/1000)),2)));
+  node_ptr->graph_matrx[incr][incr2]=m/f;
+  total++;
+  ptr++;
+  }
+  else
+  node_ptr->graph_matrx[incr][incr2]=infinity;
+  
+  }
+  
+ if (ptr<min) 
+    {
+         min=ptr;
+    }
+  else if(ptr>min)
+    {
+        max=ptr;
+    }
+	         
+  
+ }
+    printf("Maximum Number of Adjacent Vertices= %d\n",max);
+	printf("Minimum Number of Adjacent Vertices= %d\n",min;
+	mean=total/V; 
+	printf("Average number of adjacent vertices %g\n",mean); 
+ }
+}
+
+
+void short_path(home *node_ptr,int s_v, int rover_ptr)
+{
+
+{ 
+    if(s_v > node_ptr->V)
+{
+return;
+}
+
+ int V;
+ V=node_ptr->V;
+ int v[V],incr,incr2,min;
+ 
+ for(incr=V-1;incr>=0;incr--)
+ {
+  node_ptr->node_length[incr]=infinity;
+  v[incr]=0;
+  node_ptr->path[incr] = 0;
+ }
+
+ node_ptr->node_length[s_v]=0;
+ node_ptr->path[s_v] = -2*infinity; //change made
+ 
+ for(incr2=0;incr2<V;incr2++)
+ {
+  
+  min=-2;
+  for(incr=0;incr<V;incr++)
+   {
+    if(v[incr]==0)
+    {
+    if(min==-2 ||( node_ptr->node_length[i] < node_ptr->node_length[min]))
+     {
+      min=incr;
+     }
+    }
+   }
+   v[min]=1;
+   for(incr=0;incr<V;incr++) // loop problem
+    { 
+     if(node_ptr->graph_matrx[min][incr] !=infinity || node_ptr->graph_matrx[min][incr]!=0)
+     {
+      
+      if(node_ptr->node_length[incr] > node_ptr->node_length[min] + node_ptr->graph_matrx[min][incr])
+      {
+      node_ptr->node_length[incr] = node_ptr->node_length[min] + node_ptr->graph_matrx[min][incr];
+      node_ptr->path[incr] = min;
+      }
+    }
+   }   
+ }
+}   
+}			 
+	     
+void longest_path(home *node_ptr,int V,int rover_ptr)
+{
+int incr2,flag=0,length=0,sv=0,dv=0;
+int count=0;
+
+while(count < V)
+{
+ short_path(head,count,0);
+ for(incr2=0;incr2<V;incr2++)
+ {
+  if((head->distance[j] > dia) && head->distance[j]!=infinity)
+  {
+    sv=count; 
+    dia=head->distance[j];
+    d_vertex=j;
+    }
+    else if(head->distance[j]==infinity)
+    {
+    flag=1;
+    }
+   }
+   
+  count+=1; 
+}
+
+ shortest_path(head,s_vertex);
+ printf("\ndiameter %g  path :",head->distance[d_vertex]);
+ 
+ print_graph_till_destination(head, d_vertex);
+ 
+ printf("\n");
+ 
+ if(flag==1)
+ printf("Graph is not connected");
+ else
+ printf("Graph is connected");
+}
+
+ 
+/*
+this is another method to print the graph
+void print_graph(head *head,int num_vertices)
+{
+
+int i=0,j=0;
+int count=0,nn,pp;
+nn=num_vertices;
+pp=nn;
+while(count<num_vertices)
+{
+ while(count<nn)
+  {
+  printf("%g\t ",head->array_martix[i][j]);
+  j+=1;
+  nn-=1;
+  }
+  nn=pp;
+  printf("\n");
+  i+=1;
+  num_vertices-=1;
+ }
+}
+
+*/
+/*  this function prints the graph implemented and constructed in above functions*/
+void print_graph(head *head,int num_vertices)
+
+{
+	int i,j;
+	
+	for(i=0 ; i<num_vertices;i++)
+	{
+		for(j=0;j<num_vertices;j++)
+		{
+			printf("%g\t ",head->array_martix[i][j]);
+		}
+	printf("\n");
+	}
+}
+/* this function prints the shortest distance between source and destination node in graph */
+void print_graph_till_destination(head *head,int destination)
+{
+
+int i,path[head->num_vertices],flag=0;
+	int random=destination;
+	
+	while(random!= (-2*infinity))
+	     {
+	     path[flag]=random;
+	     random= head->path[random];
+	     flag++;
+	     }
+ 	for(i=flag-1;i>=0;i--)
+ 	  {
+ 	   printf("%d",path[i]);
+ 	   if(i!=0)
+ 	   {
+ 	    printf("--");
+ 	   }
+ 	  }	
+
+}

@@ -1,0 +1,104 @@
+Prof. Harlan Russell
+ECE 223, MP1, Spring 2014
+test6: like test2 but with 4 inserts in different order
+designed for a list size of 4
+
+INSERT 8
+1
+1
+1
+1
+1
+1
+1
+INSERT 9
+1
+1
+1
+1
+1
+1
+2
+INSERT 7
+1
+1
+1
+1
+1
+1
+3
+INSERT 10
+1
+1
+1
+1
+1
+1
+4
+PRINT
+
+Should show four items in list
+Output must be:
+/    Added: 8
+/    Added: 9
+/    Added: 7
+/    Added: 10
+/    4 records
+/    1: Dest IP: 7, Src: 1, ..., Time: 3
+/    2: Dest IP: 8, Src: 1, ..., Time: 1
+/    3: Dest IP: 9, Src: 1, ..., Time: 2
+/    4: Dest IP: 10, Src: 1, ..., Time: 4
+
+# TEST to remove first item in list, verify last item still present
+REMOVE 7
+PRINT
+
+Should show first item removed and three items in list
+/    Removed 1 packets matching 7
+/    3 records
+/    1: Dest IP: 8, Src: 1, ..., Time: 1
+/    2: Dest IP: 9, Src: 1, ..., Time: 2
+/    3: Dest IP: 10, Src: 1, ..., Time: 4
+
+# TEST to verify last item is still found
+LIST 10
+
+Should show last item is still found
+/    Dest IP: 10, Src: 1, ..., Time: 4
+/    Found 1 packets matching 10
+
+# TEST to see if list item counted twice
+SCAN 2
+
+Should not count last item twice
+/    No records with >= 2 matches
+
+# TEST to remove last item
+REMOVE 10
+PRINT
+
+Should show last item removed leaving just 8 and 9
+/    Removed 1 packets matching 10
+/    2 records
+/    1: Dest IP: 8, Src: 1, ..., Time: 1
+/    2: Dest IP: 9, Src: 1, ..., Time: 2
+
+# TEST to verify cannot find last item again
+LIST 10
+
+Should not find last item
+/    Did not find: 10
+
+# TEST clear list
+REMOVE 8
+REMOVE 9
+REMOVE 9
+PRINT
+
+Should show list is empty
+/    Removed 1 packets matching 8
+/    Removed 1 packets matching 9
+/    Did not remove: 9
+/    List empty
+
+QUIT

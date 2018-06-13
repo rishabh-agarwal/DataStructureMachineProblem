@@ -1,0 +1,299 @@
+// Rishabh Agarwal
+//
+// dijkstras.c
+//  
+//
+//  Created by Rishabh Agarwal on 11/12/13.
+//
+//
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "rishab.h"
+#define infinity 87654
+
+
+//----------------------------construct start----------------------//
+
+void construct(home *node_ptr,int graphchoice,int V,int rover_ptr)
+{
+    int incr=0;
+    int count=0;
+    node_ptr->V = V;
+    node_ptr->graphchoice = graphchoice;
+    node_ptr->node_length = (double *) malloc(V * sizeof (double));
+    node_ptr->path= (int *)malloc(V * sizeof(int));
+    node_ptr->graph_matrx = (double **) malloc(V * sizeof (double*));
+    if(incr<V) 
+    {
+        count+=1;
+    }
+   incr=0;
+    for(incr=0;incr<V;incr++)
+    {
+        node_ptr->graph_matrx[incr]=(double *)malloc(V * sizeof(double));
+       
+    }
+}
+//----------------------construct ends-------------------//
+//------------------destruct start------------------------------//
+void destruct(home *node_ptr)
+{
+    int incr=0;
+    while(incr < node_ptr->V)
+    {
+        free(node_ptr->graph_matrx[incr]);
+        incr=incr+1;
+    }
+    free(node_ptr->path);
+    free(node_ptr->node_length);
+    free(node_ptr->graph_matrx);
+}
+//---------------------destruct ends----------------------------//
+//--------------------shortest path starts-------------------//
+void short_path(home *node_ptr, int s_v, int rover_ptr)
+{ 
+    if(s_v > node_ptr->V)
+       {
+        return;
+       }
+ int V;
+ V=node_ptr->V;
+ int v[V],i,j,min;
+ 
+ for(i=V-1;i>=0;i--) // puting path 
+ {
+  node_ptr->node_length[i]=infinity;
+  v[i]=0;
+  node_ptr->path[i] = 0;
+ }
+    
+ node_ptr->node_length[s_v]=0;
+ node_ptr->path[s_v] = -2*infinity; 
+ for(j=0;j<V;j++)
+ {
+  min=-2;
+  for(i=0;i<V;i++)
+   {
+    if(v[i]==0)
+    {
+    if(min==-2 ||( node_ptr->node_length[i] < node_ptr->node_length[min]))
+     {
+      min=i;
+     }
+    }
+   }
+   v[min]=1;
+   for(i=0;i<V;i++) 
+    { 
+     if(node_ptr->graph_matrx[min][i] !=infinity || node_ptr->graph_matrx[min][i]!=0)
+     {
+      if(node_ptr->node_length[i] > node_ptr->node_length[min] + node_ptr->graph_matrx[min][i])
+      {
+      node_ptr->node_length[i] = node_ptr->node_length[min] + node_ptr->graph_matrx[min][i];
+      node_ptr->path[i] = min;
+      }
+    }
+   }   
+ }
+}   
+//-------------------shortest path ends------------------------------//
+//----------------------graph_display_full start------------------//
+void graph_display_full(home *node_ptr,int d,int rover_ptr)
+{
+    int path[node_ptr->V],ptr=0;
+    int stray=d;
+    while (stray!= (-2*infinity))
+    {
+        path[ptr]=stray;
+        stray= node_ptr->path[stray];
+        ptr++;
+    }
+    int incr=ptr-1;
+    while(incr>=0)
+    {
+        printf("%d",path[incr]);
+        if(incr!=0)
+        {
+            printf("--");
+        }
+        incr-=1;
+    }
+}
+//----------------------graph_display_full ends------------------//
+//-------------------------graph display start----------------------//
+void graph_display(home *node_ptr, int V,int rover_ptr)
+{
+    int incr=0;
+    int incr2=0;
+    if(incr<V || incr2<V)
+    {
+        while(incr<V)
+        {
+         while(incr2<V)
+        {
+            printf(" %g \t ",node_ptr->graph_matrx[incr][incr2]);
+        }
+        printf("\n");
+        incr2++;
+        incr++;
+        }
+    }
+}
+//-----------------------graph display ends-----------------------------//
+
+//------------------------dijkstras_graph start-------------------------------------//
+void dijkstras_graph(home *node_ptr,int graphchoice, int V, int approx_vertices, int rover_ptr)
+{
+    int incr=0,incr2=0;
+    node_ptr->graphchoice=graphchoice;
+    if(graphchoice == 1)
+    {
+        for(incr=0;incr<V;incr++)
+        {
+            while (incr2<V)
+                {
+                    node_ptr->graph_matrx[incr][incr2]= infinity;
+                    if(incr==incr2)
+                {
+                    node_ptr->graph_matrx[incr][incr2]=0;
+                }
+                    incr2++;
+            }
+        }
+        
+        node_ptr->graph_matrx[5][6]=7;
+        node_ptr->graph_matrx[3][4]=5;
+        node_ptr->graph_matrx[3][5]=1;
+        node_ptr->graph_matrx[4][5]=6;
+        node_ptr->graph_matrx[2][3]=7;
+        node_ptr->graph_matrx[2][4]=3;
+        node_ptr->graph_matrx[6][0]=4;
+        node_ptr->graph_matrx[6][3]=8;
+        node_ptr->graph_matrx[6][4]=9;
+        node_ptr->graph_matrx[1][2]=3;
+        node_ptr->graph_matrx[1][6]=5;
+        node_ptr->graph_matrx[2][6]=10;
+        }
+    if(graphchoice==2)
+    {
+        incr=0;
+        incr2=0;
+        while(incr<V)
+        {
+            while(incr2<V)
+            {
+                node_ptr->graph_matrx[incr][incr2]= abs((incr-incr2)) + pow(((incr-incr2) + 3),2) + 5*incr2;
+                if(incr==incr2)
+                 node_ptr->graph_matrx[incr][incr2]=0;
+            incr2++;
+            }
+             incr++;
+        }
+    }
+    
+    if(graphchoice==3)
+    {
+        int pie=3.14;
+        int min=infinity,max=0,rover;
+        double d,t,mean;
+        vertex array[V];
+        array[0].vertex1=0;
+        array[0].vertex2=0.5;
+        array[V-1].vertex1=1;
+        array[V-1].vertex2=0.5;
+        int incr=1;
+        while(incr<V-1)
+        {
+            array[incr].vertex1=drand48();
+            array[incr].vertex2=drand48();
+            incr+=1;
+        }
+        double c=0,m=0,f=0;
+        m= log10(1+ pow((1/c),2));
+        c= sqrt (((approx_vertices)/(V*pie)));
+        incr=0;
+        int incr2=0;
+        while(incr<V)
+        {
+            while(incr2<V)
+            {
+                d = sqrt((pow((array[incr].vertex1 - array[incr2].vertex1),2)) + (pow((array[incr].vertex2 - array[incr2].vertex2),2)));
+                if(d<=c)
+                {
+                    f= log10(1+(pow(1/(d+(c/1000)),2)));
+                    node_ptr->graph_matrx[incr][incr2]=m/f;
+                    t++;
+                    rover++;
+                }
+                else if(incr==incr2)
+                {
+                    node_ptr->graph_matrx[incr][incr2]=0;
+                }
+                
+                else
+                {
+                    node_ptr->graph_matrx[incr][incr2]=infinity;
+                }
+            
+            incr2++;
+            }
+            if(rover>min)
+            {
+                max=rover;
+            }
+            
+            else if(rover<min)
+            {
+                min=rover;
+            }
+            incr++;
+           }
+        mean=t/V;
+        printf("Maximum no. of adjacent Vertices: %d\n",max);
+        printf("Minimum no. of adjacent Vertices: %d\n",min);
+        printf("Average of adjacent vertices %g\n",mean);
+        }
+    else
+        return;
+}
+ //-----------------------dijkstras graph ends--------------------------------------------//
+
+//----------------------------------longest path start-----------------------------------//
+
+void longest_path(home *node_ptr,int V, int rover_ptr)
+{
+    int incr=0;
+    int flag=0,lg=0,s_v=0,d_v=0;
+    int count=0;
+    while(count < V)
+       {
+        short_path(node_ptr,count,0);
+        while(incr<V)
+        {
+            if(node_ptr->node_length[incr]==infinity)
+            {
+                flag=1;
+            }
+            else if(node_ptr->node_length[incr]!=infinity && (node_ptr->node_length[incr] > lg))
+            {
+                s_v=count;
+                lg=node_ptr->node_length[incr];
+                d_v=incr;
+            }
+            incr++;
+        }
+       } 
+    short_path(node_ptr,s_v,0);
+    printf("\n Longest path : %g :",node_ptr->node_length[d_v]);
+    graph_display_full(node_ptr, d_v,0);
+    printf("\n");
+    if(flag==0)
+        printf("Graph is connected");
+    else
+        printf("Graph is not connected");
+}
+
+//--------------------------------longest path ends-------------------------------------------------//
+

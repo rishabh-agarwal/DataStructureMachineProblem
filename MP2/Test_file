@@ -1,0 +1,74 @@
+
+# TEST 1:  Add five entries to list.  
+# 
+IP address:Access point IP address:Authenticated (T/F):Privacy (none|WEP|WPA|WPA2):Standard letter (a b e g h n s):Band (2.4|5.0):Channel:Data rate:Time received (int):
+Added to tail: 19
+IP address:Access point IP address:Authenticated (T/F):Privacy (none|WEP|WPA|WPA2):Standard letter (a b e g h n s):Band (2.4|5.0):Channel:Data rate:Time received (int):
+Added to tail:18
+IP address:Access point IP address:Authenticated (T/F):Privacy (none|WEP|WPA|WPA2):Standard letter (a b e g h n s):Band (2.4|5.0):Channel:Data rate:Time received (int):
+Added to tail: 31
+IP address:Access point IP address:Authenticated (T/F):Privacy (none|WEP|WPA|WPA2):Standard letter (a b e g h n s):Band (2.4|5.0):Channel:Data rate:Time received (int):
+Added to tail: 66
+IP address:Access point IP address:Authenticated (T/F):Privacy (none|WEP|WPA|WPA2):Standard letter (a b e g h n s):Band (2.4|5.0):Channel:Data rate:Time received (int):
+Added to tail: 88
+# 
+# To determine if test 1 passes look for five "Added" messages
+# /    Added to tail: 8
+# /    Added to tail: 9
+# /    Added to tail: 9
+# /    Added to tail: 9
+# /    Added to tail: 5 
+# 
+# TEST 2: Print the list and verify the five entries are in same order
+# 
+Queue with 5 records
+1: eth: 8, MIP: 100, AID: 200, Auth: T, Pri: WEP, L: b, B: 2, C: 4, R: 54.4 Time: 1
+2: eth: 9, MIP: 901, AID: 200, Auth: T, Pri: WEP, L: b, B: 2, C: 4, R: 54.4 Time: 2
+3: eth: 9, MIP: 902, AID: 200, Auth: T, Pri: WEP, L: b, B: 2, C: 4, R: 54.4 Time: 3
+4: eth: 9, MIP: 903, AID: 200, Auth: T, Pri: WEP, L: b, B: 2, C: 4, R: 54.4 Time: 4
+5: eth: 5, MIP: 500, AID: 200, Auth: T, Pri: WEP, L: b, B: 2, C: 4, R: 54.4 Time: 5
+
+Number records: 0, queue size: 5
+# 
+# To deterine if test 2 passes list should be printed with 5 records, and
+# the time field should be increasing.
+# Also, stats should show 0 records and queue size 5
+# 
+# TEST 3: Delete all records with address 9
+# 
+No deletions, queue empty
+# 
+# To determine if test 3 passes look for message
+# /    Removed 3 copies of 9
+# 
+# TEST 4: Print the list, verify entry for 111 replaced
+# 
+Queue with 5 records
+1: eth: 8, MIP: 100, AID: 200, Auth: T, Pri: WEP, L: b, B: 2, C: 4, R: 54.4 Time: 1
+2: eth: 9, MIP: 901, AID: 200, Auth: T, Pri: WEP, L: b, B: 2, C: 4, R: 54.4 Time: 2
+3: eth: 9, MIP: 902, AID: 200, Auth: T, Pri: WEP, L: b, B: 2, C: 4, R: 54.4 Time: 3
+4: eth: 9, MIP: 903, AID: 200, Auth: T, Pri: WEP, L: b, B: 2, C: 4, R: 54.4 Time: 4
+5: eth: 5, MIP: 500, AID: 200, Auth: T, Pri: WEP, L: b, B: 2, C: 4, R: 54.4 Time: 5
+
+# /    The print output shows 2 items, check time is increasing
+# 
+# TEST 5: remove last two items in queue
+# 
+Removed from head: 8
+Removed from head: 9
+# 
+# Should find:
+# /    Removed from head: 8
+# /    Removed from head: 5
+# 
+# TEST 6: print when the queue is empty
+# 
+Queue with 3 records
+1: eth: 9, MIP: 902, AID: 200, Auth: T, Pri: WEP, L: b, B: 2, C: 4, R: 54.4 Time: 3
+2: eth: 9, MIP: 903, AID: 200, Auth: T, Pri: WEP, L: b, B: 2, C: 4, R: 54.4 Time: 4
+3: eth: 5, MIP: 500, AID: 200, Auth: T, Pri: WEP, L: b, B: 2, C: 4, R: 54.4 Time: 5
+
+# 
+# Output must be:
+# /    Queue empty
+Goodbye

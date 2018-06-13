@@ -1,0 +1,119 @@
+Prof. Harlan Russell
+ECE 223, MP1, Spring 2014
+test4 11 inserts and lists and scans
+designed for a list size of 4
+
+INSERT 3
+1
+1
+1
+1
+1
+1
+5
+INSERT 1
+1
+1
+1
+1
+1
+1
+6
+INSERT 7
+1
+1
+1
+1
+1
+1
+7
+INSERT 10
+1
+1
+1
+1
+1
+1
+8
+INSERT 6
+1
+1
+1
+1
+1
+1
+9
+INSERT 7
+1
+1
+1
+1
+1
+1
+10
+INSERT 7
+1
+1
+1
+1
+1
+1
+11
+INSERT 8
+1
+1
+1
+1
+1
+1
+12
+INSERT 8
+1
+1
+1
+1
+1
+1
+13
+INSERT 10
+1
+1
+1
+1
+1
+1
+14
+INSERT 8
+1
+1
+1
+1
+1
+1
+15
+PRINT
+
+Inserts and first print same as test3
+
+LIST 8
+
+/    Found 3 packets matching 8
+
+SCAN 3
+
+/    A set with address 7 has 3 packets
+/    A set with address 8 has 3 packets
+/    Found 2 sets
+
+SCAN 2
+
+/    A set with address 7 has 3 packets
+/    A set with address 8 has 3 packets
+/    A set with address 10 has 2 packets
+/    Found 3 sets
+
+SCAN 4
+
+/    No records with >= 4 matches
+
+QUIT

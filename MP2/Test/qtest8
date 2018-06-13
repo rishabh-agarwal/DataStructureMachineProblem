@@ -1,0 +1,68 @@
+Prof. Harlan Russell
+ECE 223, MP2, Fall 2013
+qtest8 run ending at tail 
+
+ADDTAIL 7
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+1
+ADDTAIL 9
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+2
+ADDTAIL 9
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+3
+ADDTAIL 9
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+4
+ADDTAIL 9
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+5
+DELMAX
+PRINTQ
+
+Output must be:
+/    Added to tail: 7
+/    Added to tail: 9
+/    Added to tail: 9
+/    Added to tail: 9
+/    Added to tail: 9 
+/    Removed 4 copies of 9
+/    Queue with 1 records
+/    Goodbye
+QUIT
+

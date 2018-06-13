@@ -1,0 +1,27 @@
+Seed: 54321
+First-fit search policy starting at rover without coalescing
+
+----- Begin unit test driver 0 -----
+Size of Chunk_t 8string length=15
+:hello world 15c:
+
+Free list after first allocation
+
+ Toatal number of Chunks in free list: 1
+Min Size: 0.00 Max Size: 0.00 Average Size: 0.000
+Total Memory in list: 0
+Calls to sbrk: 1, Pages Requested: 1
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x831f000
+p=0x831f000, size=509, end=0x831ffe8, next=0x804e0a4
+
+Free list after first free
+
+ Toatal number of Chunks in free list: 2
+Min Size: 0.00 Max Size: 24.00 Average Size: 12.000
+Total Memory in list: 24
+Calls to sbrk: 1, Pages Requested: 1
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x831ffe8
+p=0x831ffe8, size=3, end=0x8320000, next=0x831f000
+p=0x831f000, size=509, end=0x831ffe8, next=0x804e0a4
+
+----- End unit test driver 0 -----

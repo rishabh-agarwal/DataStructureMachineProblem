@@ -1,0 +1,17 @@
+Performance Evaluation
+Expected successful search for intial tree =39.0831	
+Expected successful search for intial tree =42.0824
+
+
+The best case for binary search tree if the search item is the first item is the search item.
+
+
+  13
+12 
+  10
+     06
+     
+Here Best case will be searching 12 in BST and the worst case will be searching 06 in the tree.
+
+By the data we got from equllibrium driver, using time and successfull and unsuccesfull searches we can easily say that
+search time are O(log n).

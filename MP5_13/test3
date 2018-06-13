@@ -1,0 +1,69 @@
+Seed: 341
+
+
+ ====== Unit Driver ======
+
+Inserting 16 items into tree
+Created tree for testing removes
+  200
+                 175
+            150
+                           140
+                      135
+                           130
+                 125
+       100
+                       85
+                                 82
+                            80
+                                 78
+                  75
+                       65
+             50
+                  25
+Removing 3 items from tree
+ -- Test (0) about to remove key 100
+  200
+                 175
+            150
+                      140
+                 135
+                      130
+       125
+                       85
+                                 82
+                            80
+                                 78
+                  75
+                       65
+             50
+                  25
+ -- Test (1) about to remove key 85
+  200
+                 175
+            150
+                      140
+                 135
+                      130
+       125
+                            82
+                       80
+                            78
+                  75
+                       65
+             50
+                  25
+ -- Test (2) about to remove key 125
+  200
+                 175
+            150
+                      140
+                 135
+       130
+                            82
+                       80
+                            78
+                  75
+                       65
+             50
+                  25

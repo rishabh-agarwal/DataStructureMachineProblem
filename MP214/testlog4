@@ -1,0 +1,79 @@
+Welcome to lab2. Using list size: 1
+# Prof. Harlan Russell
+# ECE 223, MP1, Spring 2014
+# test4 11 inserts and lists and scans
+# designed for a list size of 4
+# 
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 3 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 1 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 7 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 10 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 6 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 7 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 7 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 8 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 8 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 10 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 8 into list
+1: Dest IP: 1, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 6
+2: Dest IP: 3, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 5
+3: Dest IP: 6, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 9
+4: Dest IP: 7, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 7
+5: Dest IP: 7, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 10
+6: Dest IP: 7, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 11
+7: Dest IP: 8, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 12
+8: Dest IP: 8, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 13
+9: Dest IP: 8, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 15
+10: Dest IP: 10, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 8
+11: Dest IP: 10, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 14
+List contains 11 records.
+
+# 
+# Inserts and first print same as test3
+# 
+Dest IP: 8, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 12
+Dest IP: 8, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 13
+Dest IP: 8, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 15
+Found 3 packets matching 8
+# 
+# /    Found 3 packets matching 8
+# 
+Dest IP: 7, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 11
+Dest IP: 8, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 15
+A set with address 10 has 2 packets
+Scan found 1 sets
+# 
+# /    A set with address 7 has 3 packets
+# /    A set with address 8 has 3 packets
+# /    Found 2 sets
+# 
+Dest IP: 7, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 10
+Dest IP: 7, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 11
+Dest IP: 8, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 13
+Dest IP: 8, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 15
+Dest IP: 10, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 14
+A set with address 10 has 2 packets
+Scan found 4 sets
+# 
+# /    A set with address 7 has 3 packets
+# /    A set with address 8 has 3 packets
+# /    A set with address 10 has 2 packets
+# /    Found 3 sets
+# 
+A set with address 10 has 2 packets
+Scan found no records with >= 4 matches
+# 
+# /    No records with >= 4 matches
+# 
+Goodbye

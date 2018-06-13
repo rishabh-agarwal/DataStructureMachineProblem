@@ -1,0 +1,66 @@
+Prof. Harlan Russell
+ECE 223, MP1, Spring 2014
+simpletest.txt
+
+Test script to show a few simple tests for the sequential list ADT.
+
+TEST 1:  Add three entries to list.  
+
+INSERT 111
+100
+80
+1500
+2
+1
+1.1
+1
+INSERT 551 
+500
+21
+1501
+5
+2
+5.7
+2
+INSERT 100 
+111
+1500
+80
+2
+1
+1.8
+3
+
+TEST 2: Print the list and verify three entries are sorted 
+
+PRINT
+
+TEST 3:  Add a second 111 entry in the list
+
+INSERT 111
+101
+80
+1504
+2
+1
+9.2
+4
+
+TEST 4: Print the list, verify two entrys for 111, and four total entries
+
+PRINT
+
+TEST 5: Scan for attack on address 111 and then print details
+
+SCAN 2
+LIST 111
+
+TEST 6: Remove the last element in the list 
+
+REMOVE 551
+PRINT
+
+TEST 7: Quit
+
+QUIT
+

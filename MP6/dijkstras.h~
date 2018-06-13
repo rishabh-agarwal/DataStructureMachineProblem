@@ -1,0 +1,36 @@
+// Rishabh Agarwal
+//  dijkstras.h
+//  
+//
+//  Created by Rishabh Agarwal on 11/12/13.
+//
+//
+typedef struct start
+{
+    int V;//num_vertices
+    int *path;//path
+    int graphchoice;//graphs type
+    
+    double *node_length;//distance
+    double **graph_matrx;//array_matrix
+}home;//head
+typedef struct node
+{
+    float vertex1; //x
+    float vertex2; //y
+}vertex;//cord
+
+void construct(home *node_ptr, int vertex1, int vertex2);
+//void  construct(head *head ,int a,int b);
+void destruct(home *node_ptr);
+//void destruct (head *node);
+void dijkstras_graph(home *node_ptr,int graphchoice, int V, int V1);
+//void graph(head *head, int graph_type , int num_vertices, int approx_vertices);
+void graph_display(home *node_ptr, int V);
+//void print_graph(head *head,int num_vertices);
+void graph_display_full(home *node_ptr , int d);
+//void print_graph(head *head,int num_vertices);
+void short_path(home *node_ptr, int V);
+//void shortest_path(head *head,int svertex);
+void longest_path(home *node_ptr,int V);
+//void diameter(head *head ,int num_vertex);

@@ -1,0 +1,22 @@
+Prof. Harlan Russell
+ECE 223, MP1, Fall 2013
+test2 single insert no leak
+
+ADD 111
+100
+200
+T
+WEP
+b
+2.4
+2
+54.2
+1
+STATS
+
+Output must be:
+/    Inserted: 111
+/    Number records: 1, Array size: 5
+/    Goodbye
+QUIT
+

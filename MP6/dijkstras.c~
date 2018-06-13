@@ -1,0 +1,282 @@
+//Rishabh Agarwal
+//
+//  dijkstras.c
+//  
+//
+//  Created by Rishabh Agarwal on 12/11/13.
+//
+//
+
+#include <stdio.h>
+#include <math.h>
+
+#define infinity 87654
+
+
+
+void construct(home *node_ptr, int vertex1, int vertex2)
+{
+    int incr;
+    home->node_length = (double *)malloc (V * sizeof (double));
+    home->graph_matrx = (double **)malloc (V * sizeof (double*));
+    home->path= (int *)malloc(V * sizeof(int));
+    home->graphchoice = graphchoice;
+    home->V = V;
+    for(incr=0;incr<V;incr++)
+    {
+        home->graph_matrx[incr]=(double *)malloc (V * sizeof(double));
+    }
+}
+void destruct(home *node_ptr)
+{
+    int incr;
+    for(incr=0;incr<node_ptr->V;incr++)
+    {
+        free(node_ptr->graph_matrx[i]);
+    }
+    free(node_ptr->path);
+    free(node_ptr->node_length);
+    free(node_ptr->graph_matrx);
+   
+    
+}
+
+
+/* this function implements the graph constructed in construct function */
+
+void dijkstras_graph(home *node_ptr,int graphchoice, int V, int V1)
+{
+    int incr,incr2;
+    
+    home->graphchoice=graphchoice;//
+    if(graphchoice == 1)
+    {
+        for(incr=0;incr<V;incr++)//
+        {
+            for(incr2=0;incr2<V;incr2++)
+            {
+                home->graph_matrx[incr][incr2]= infinity;
+                if(incr==incr2)
+                {
+                    home->graph_matrx[incr][incr2]=0;
+                }
+            }
+        }
+        
+        
+        home->graph_matrx[1][2]=3;
+        home->graph_matrx[1][6]=5;
+        home->graph_matrx[2][3]=7;
+        home->graph_matrx[2][4]=3;
+        home->graph_matrx[2][6]=10;
+        home->graph_matrx[3][4]=5;
+        home->graph_matrx[3][5]=1;
+        home->graph_matrx[4][5]=6;
+        home->graph_matrx[5][6]=7;
+        home->graph_matrx[6][0]=4;
+        home->graph_matrx[6][3]=8;
+        home->graph_matrx[6][4]=9;
+        
+    }
+    
+    if(graphchoice==2)
+    {
+        
+        for(incr=0;incr<V;incr++)
+        {
+            for(incr2=0;incr2<V;incr2++)
+            {
+                home->graph_matrx[incr][incr2]= abs((incr-incr2)) + pow(((incr-incr2) + 3),2) + 5*incr2;
+                if(incr==incr2)
+                    home->graph_matrx[incr][incr2]=0;
+            }
+        }
+        
+    }
+    
+    if(graphchoice==3)
+    {
+        
+        int incr,incr2,min=infinity,max=0,rover;
+        double d,t,mean;
+        cord array[V];
+        array[0].x=0;
+        array[0].y=0.5;
+        array[V-1].x=1;
+        array[V-1].y=0.5;
+        for(i=1;i<V-1;i++)
+        {
+            array[i].x=drand48();
+            array[i].y=drand48();
+        }
+        double c,m,f;
+        c= sqrt ((approx_vertices/(V*pie)));
+        m= log10(1+ pow((1/c),2));
+        for(i=0;i<V;i++)
+        {
+            for(j=0;j<V;j++)
+            {
+                d = sqrt((pow((array[i].x - array[j].x),2)) + (pow((array[i].y - array[j].y),2)));
+                if(i==j)
+                    home->graph_matrx[i][j]=0;
+                else if(d<=c)
+                {
+                    
+                    f= log10(1+(pow(1/(d+(c/1000)),2)));
+                    home->graph_matrx[i][j]=m/f;
+                    t++;
+                    rover++;
+                }
+                else
+                    home->graph_matrx[i][j]=infinity;
+                
+            }
+            
+            if (rover<min)
+            {
+                min=rover;
+            }
+            else if(rover>min)
+            {
+                max=rover;
+            }
+            
+            
+        }
+        printf("max Number of Adjacent Vertices= %d\n",max);
+        printf("min Number of Adjacent Vertices= %d\n",min);
+        mean=t/V;
+        printf("mean number of adjacent vertices %g\n",mean);
+    }
+}
+
+/* this function calculates the node_length and shortest path  */
+
+void short_path(home *node_ptr, int V)
+{
+    if(s_v > home->V)
+    {
+        //printf("You enter wrong Source vertices as this source vertices doesnot exist \n");
+        return;
+    }
+    
+    int V;
+    V=home->V;
+    int v[V],i,j,min;
+    
+    for(i=V-1;i>=0;i--)
+    {
+        home->node_length[i]=infinity;
+        v[i]=0;
+        home->path[i] = 0;
+    }
+    
+    home->node_length[s_v]=0;
+    home->path[s_v] = -1*infinity; //change made
+    
+    for(j=0;j<V;j++)
+    {
+        
+        min=-1;
+        for(i=0;i<V;i++)
+        {
+            if(v[i]==0)
+            {
+                if(min==-1 ||( home->node_length[i] < home->node_length[min]))
+                {
+                    min=i;
+                }
+            }
+        }
+        v[min]=1;
+        for(i=0;i<V;i++)
+        {
+            if(home->graph_matrx[min][i] !=infinity || home->graph_matrx[min][i]!=0)
+            {
+                
+                if(home->node_length[i] > home->node_length[min] + home->graph_matrx[min][i])
+                {
+                    home->node_length[i] = home->node_length[min] + home->graph_matrx[min][i];
+                    home->path[i] = min;
+                }
+            }
+        }
+    }
+}
+
+/* this function calculates diameter, if the graph is connected, for which cost of shortest path from source to destination has largest value among all possible values.*/
+
+void longest_path(home *node_ptr,int V)
+{
+    int j,flag=0,dia=0,s_vertex=0,d_vertex=0;
+    int count=0;
+    
+    while(count < num_vertex)
+    {
+        shortest_path(home,count);
+        for(j=0;j<num_vertex;j++)
+        {
+            if((home->node_length[j] > dia) && home->node_length[j]!=infinity)
+            {
+                s_vertex=count;
+                dia=home->node_length[j];
+                d_vertex=j;
+            }
+            else if(home->node_length[j]==infinity)
+            {
+                flag=1;
+            }
+        }
+        
+        count+=1;
+    }
+    
+    shortest_path(home,s_vertex);
+    printf("\ndiameter %g  path :",home->node_length[d_vertex]);
+    
+    print_graph_till_destination(home, d_vertex);
+    
+    printf("\n");
+    
+    if(flag==1)
+        printf("Graph is not connected");
+    else
+        printf("Graph is connected");
+}
+
+void graph_display(home *node_ptr, int V);
+
+{
+    int i,j;
+    
+    for(i=0 ; i<V;i++)
+    {
+        for(j=0;j<V;j++)
+        {
+            printf("%g\t ",home->graph_matrx[i][j]);
+        }
+        printf("\n");
+    }
+}
+void graph_display_full(home *node_ptr,int d)
+{
+    
+    int i,path[home->V],flag=0;
+    int random=destination;
+    
+    while(random!= (-1*infinity))
+    {
+        path[flag]=random;
+        random= home->path[random];
+        flag++;
+    }
+    for(i=flag-1;i>=0;i--)
+    {
+        printf("%d",path[i]);
+        if(i!=0)
+        {
+            printf("--");
+        }
+    } 
+    
+}

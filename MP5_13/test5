@@ -1,0 +1,12 @@
+Seed: 341
+
+
+ ====== Unit Driver ======
+
+Inserting 4 items into tree
+Created tree for testing removes
+         9
+    5
+Removing 1 items from tree
+ -- Test (0) about to remove key 9
+    5

@@ -1,0 +1,37 @@
+BEST FIT Unit 1
+Non-option argument run
+Non-option argument best
+Seed: 54321
+First-fit search policy starting at rover without coalescing
+Size of Chunk_t 8first allocation of 792 bytes p=0x929fcf0 
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x929f000
+p=0x929f000, size=413, end=0x929fce8, next=0x804e0a4
+second allocation of 392 bytes p=0x929fb68
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x929f000
+p=0x929f000, size=364, end=0x929fb60, next=0x804e0a4
+third allocation of 2888 bytes p=0x929f020
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x929f000
+p=0x929f000, size=3, end=0x929f018, next=0x804e0a4
+fourth allocation of 1016 bytes p=0x92a0c10
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x929f000
+p=0x929f000, size=3, end=0x929f018, next=0x92a0000
+p=0x92a0000, size=385, end=0x92a0c08, next=0x804e0a4
+first free of p=0x929fcf0 
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x929fce8
+p=0x929fce8, size=99, end=0x92a0000, next=0x929f000
+p=0x929f000, size=3, end=0x929f018, next=0x92a0000
+p=0x92a0000, size=385, end=0x92a0c08, next=0x804e0a4
+second free of p=0x929f020 
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x929f018
+p=0x929f018, size=361, end=0x929fb60, next=0x929fce8
+p=0x929fce8, size=99, end=0x92a0000, next=0x929f000
+p=0x929f000, size=3, end=0x929f018, next=0x92a0000
+p=0x92a0000, size=385, end=0x92a0c08, next=0x804e0a4
+third and fourth free of p=0x929fb68 and 0x92a0c10
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x92a0c08
+p=0x92a0c08, size=127, end=0x92a1000, next=0x929fb60
+p=0x929fb60, size=49, end=0x929fce8, next=0x929f018
+p=0x929f018, size=361, end=0x929fb60, next=0x929fce8
+p=0x929fce8, size=99, end=0x92a0000, next=0x929f000
+p=0x929f000, size=3, end=0x929f018, next=0x92a0000
+p=0x92a0000, size=385, end=0x92a0c08, next=0x804e0a4

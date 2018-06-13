@@ -1,0 +1,18 @@
+Non-option argument run
+Seed: 341
+
+----- Equilibrium test driver -----
+  Trials in equilibrium: 50000
+  Levels in initial tree: 16
+  Initial random tree size=65535
+  Expect successful search for initial tree=39.799
+  Expect unsuccessful search for initial tree=42.7983
+  After exercise, time=20, new tree size=65684
+  successful searches during exercise=41.0357, trials=24919
+  unsuccessful searches during exercise=41.8057, trials=25081
+  Validating tree...passed
+  After access experiment, time=20, tree size=65684
+  Expect successful search=39.7025, measured=39.7707, trials=25025
+  Expect unsuccessful search=42.7019, measured=42.0674, trials=24975
+----- End of equilibrium test -----
+

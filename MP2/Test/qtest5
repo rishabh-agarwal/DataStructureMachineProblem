@@ -1,0 +1,57 @@
+Prof. Harlan Russell
+ECE 223, MP2, Fall 2013
+qtest5 ascending list max at tail
+
+ADDTAIL 5
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+1
+ADDTAIL 7
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+2
+ADDTAIL 9
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+3
+ADDTAIL 11
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+4
+DELMAX
+PRINTQ
+
+Output must be:
+/    Added to tail: 5 
+/    Added to tail: 7
+/    Added to tail: 9
+/    Added to tail: 11
+/    Removed 1 copies of 11
+/    Queue with 3 records
+/    Goodbye
+QUIT
+

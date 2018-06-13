@@ -1,0 +1,79 @@
+/* geninput.c
+ * MP3
+ * Harlan Russell
+ * ECE 223, Fall 2013
+ *
+ * Purpose: Generate an input file for MP3 
+ * Assumptions: Input file is for testing sort.  Creates
+ *              an unsorted list, uses ADDTAIL to insert items, and
+ *              calls SORT to sort the list
+ *
+ * Command line arguments:
+ *    1st -- number of records to create
+ *    2nd -- type of list to create
+ *           1: random addresses [0, 3/4 number records)
+ *           2: assending and sequential
+ *           3: descending and sequential
+ *
+ * Pipe the output of this program into lab3. For example
+ *     ./geninput 10000 1 | ./lab3 1
+ *
+ * See also mp3test.sh 
+ */
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    int records, list_type;
+    int addr_range;
+    int eth_addr;
+
+    if (argc !=3) {
+        printf("Usage: ./geninput listsize listype\n");
+        exit(1);
+    }
+    records = atoi(argv[1]);
+    if (records < 2) {
+        printf("genniput has invalid number records: %d\n", records);
+        exit(2);
+    }
+    list_type = atoi(argv[2]);
+    addr_range = records * 0.75;
+    srand48(2);
+
+    int i;
+    if (list_type == 1) {
+        // random addresses, 
+        for (i = 0; i < records; i++) {
+            eth_addr = (int) (addr_range * drand48());
+            printf("ADDTAIL %d\n", eth_addr);
+        }
+        printf("SORT\n");
+        printf("QUIT\n");
+    }
+    else if (list_type == 2) {
+        // ascending addresses
+        for (i = 0; i < records; i++) {
+            eth_addr = i;
+            printf("ADDTAIL %d\n", eth_addr);
+        }
+        printf("SORT\n");
+        printf("QUIT\n");
+    }
+    else if (list_type == 3) {
+        // descending addresses
+        for (i = 0; i < records; i++) {
+            eth_addr = records - i;
+            printf("ADDTAIL %d\n", eth_addr);
+        }
+        printf("SORT\n");
+        printf("QUIT\n");
+    }
+    else {
+        printf("geninput has invalid list type: %d\n", list_type);
+        exit(3);
+    }
+    exit(0);
+}

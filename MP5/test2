@@ -1,0 +1,113 @@
+Seed: 341
+
+
+ ====== Unit Driver ======
+
+Inserting 13 items into tree
+Created tree for testing removes
+                  60
+             56
+        48
+                  44
+             40
+                  36
+   32
+                  28
+             24
+                  20
+        16
+              8
+                   4
+Removing 3 items from tree
+ -- Test (0) about to remove key 16
+                  60
+             56
+        48
+                  44
+             40
+                  36
+   32
+                  28
+             24
+        20
+              8
+                   4
+ -- Test (1) about to remove key 48
+             60
+        56
+                  44
+             40
+                  36
+   32
+                  28
+             24
+        20
+              8
+                   4
+ -- Test (2) about to remove key 32
+             60
+        56
+                  44
+             40
+   36
+                  28
+             24
+        20
+              8
+                   4
+
+
+ ====== Unit Driver ======
+
+Inserting 13 items into tree
+Created tree for testing removes
+                  60
+             56
+                  52
+        48
+             40
+                  36
+   32
+                  28
+             24
+        16
+                  12
+              8
+                   4
+Removing 3 items from tree
+ -- Test (0) about to remove key 16
+                  60
+             56
+                  52
+        48
+             40
+                  36
+   32
+             28
+        24
+                  12
+              8
+                   4
+ -- Test (1) about to remove key 48
+                  60
+             56
+        52
+             40
+                  36
+   32
+             28
+        24
+                  12
+              8
+                   4
+ -- Test (2) about to remove key 32
+                  60
+             56
+        52
+             40
+   36
+             28
+        24
+                  12
+              8
+                   4

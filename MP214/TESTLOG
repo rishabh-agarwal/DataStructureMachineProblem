@@ -1,0 +1,53 @@
+Welcome to lab2. Using list size: 1
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 1 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 1 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 1 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 2 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 2 into list
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+Inserted 3 into list
+# 
+# 
+1: Dest IP: 1, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 1
+2: Dest IP: 1, Src: 2, Dest port: 2, Src: 2, Hop Count: 2 Prot: 2 Score: 2, Time: 2
+3: Dest IP: 1, Src: 3, Dest port: 3, Src: 3, Hop Count: 3 Prot: 3 Score: 3, Time: 3
+4: Dest IP: 2, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 1
+5: Dest IP: 2, Src: 2, Dest port: 2, Src: 2, Hop Count: 2 Prot: 2 Score: 2, Time: 2
+6: Dest IP: 3, Src: 3, Dest port: 3, Src: 3, Hop Count: 3 Prot: 3 Score: 3, Time: 3
+List contains 6 records.
+
+# 
+Did not remove: 4
+# 
+1: Dest IP: 1, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 1
+2: Dest IP: 1, Src: 2, Dest port: 2, Src: 2, Hop Count: 2 Prot: 2 Score: 2, Time: 2
+3: Dest IP: 1, Src: 3, Dest port: 3, Src: 3, Hop Count: 3 Prot: 3 Score: 3, Time: 3
+4: Dest IP: 2, Src: 1, Dest port: 1, Src: 1, Hop Count: 1 Prot: 1 Score: 1, Time: 1
+5: Dest IP: 2, Src: 2, Dest port: 2, Src: 2, Hop Count: 2 Prot: 2 Score: 2, Time: 2
+6: Dest IP: 3, Src: 3, Dest port: 3, Src: 3, Hop Count: 3 Prot: 3 Score: 3, Time: 3
+List contains 6 records.
+
+# 
+Removed 2 packets matching 2
+# 
+Removed 3 packets matching 1
+# 
+Did not remove: 96
+# 
+1: Dest IP: 3, Src: 3, Dest port: 3, Src: 3, Hop Count: 3 Prot: 3 Score: 3, Time: 3
+List contains 1 record.
+
+# 
+Dest IP: 3, Src: 3, Dest port: 3, Src: 3, Hop Count: 3 Prot: 3 Score: 3, Time: 3
+Found 1 packets matching 3
+# 
+1: Dest IP: 3, Src: 3, Dest port: 3, Src: 3, Hop Count: 3 Prot: 3 Score: 3, Time: 3
+List contains 1 record.
+
+# 
+Goodbye

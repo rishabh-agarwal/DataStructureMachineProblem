@@ -1,0 +1,74 @@
+Prof. Harlan Russell
+ECE 223, MP1, Fall 2013
+test16 fill list, remove middle item, insert new last item
+
+ADD 111
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+1
+ADD 100
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+2
+ADD 250
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+3
+ADD 200
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+4
+DEL 111
+ADD 300
+101
+201
+T
+WEP
+d
+2.4
+1
+1.3
+5
+STATS
+PRINT
+
+Output must be:
+/    Inserted: 111
+/    Inserted: 100
+/    Inserted: 250
+/    Inserted: 200
+/    Removed: 111
+/    Inserted: 300
+/    Number records: 4, Array size: 4
+/    3 records
+/    1: eth: 100, MIP: 100, AID: 200, Auth: F, Pri: WPA, ..., Time: 2
+/    1: eth: 200, MIP: 100, AID: 200, Auth: F, Pri: WPA, ..., Time: 4
+/    1: eth: 250, MIP: 100, AID: 200, Auth: F, Pri: WPA, ..., Time: 3
+/    1: eth: 300, MIP: 101, AID: 201, Auth: T, Pri: WEP, ..., Time: 5
+/    Goodbye
+QUIT
+

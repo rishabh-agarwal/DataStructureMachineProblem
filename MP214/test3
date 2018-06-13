@@ -1,0 +1,123 @@
+Prof. Harlan Russell
+ECE 223, MP1, Spring 2014
+test3 11 inserts 
+designed for an initial list size of 4
+
+INSERT 3
+1
+1
+1
+1
+1
+1
+5
+INSERT 1
+1
+1
+1
+1
+1
+1
+6
+INSERT 7
+1
+1
+1
+1
+1
+1
+7
+INSERT 10
+1
+1
+1
+1
+1
+1
+8
+INSERT 6
+1
+1
+1
+1
+1
+1
+9
+INSERT 7
+1
+1
+1
+1
+1
+1
+10
+INSERT 7
+1
+1
+1
+1
+1
+1
+11
+INSERT 8
+1
+1
+1
+1
+1
+1
+12
+INSERT 8
+1
+1
+1
+1
+1
+1
+13
+INSERT 10
+1
+1
+1
+1
+1
+1
+14
+INSERT 8
+1
+1
+1
+1
+1
+1
+15
+
+Output must be:
+/    Added: 3
+/    Added: 1
+/    Added: 7
+/    Added: 10
+/    Added: 6 and doubled list size
+/    Added: 7
+/    Added: 7
+/    Added: 8
+/    Added: 8 and doubled list size
+/    Added: 10
+/    Added: 8
+
+PRINT
+
+/    11 records
+/    1: Dest IP: 1, Src: 1, ..., Time: 6
+/    2: Dest IP: 3, Src: 1, ..., Time: 5
+/    3: Dest IP: 6, Src: 1, ..., Time: 9
+/    4: Dest IP: 7, Src: 1, ..., Time: 7
+/    5: Dest IP: 7, Src: 1, ..., Time: 10
+/    6: Dest IP: 7, Src: 1, ..., Time: 11
+/    7: Dest IP: 8, Src: 1, ..., Time: 12
+/    8: Dest IP: 8, Src: 1, ..., Time: 13
+/    9: Dest IP: 8, Src: 1, ..., Time: 15
+/   10: Dest IP: 10, Src: 1, ..., Time: 8
+/   11: Dest IP: 10, Src: 1, ..., Time: 14
+
+QUIT

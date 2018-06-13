@@ -1,0 +1,37 @@
+Seed: 54321
+First-fit search policy starting at rover without coalescing
+The size of chunk_t is 8 bytes
+Size of Chunk_t 8first allocation of 152 bytes p=0x9ad8f68 
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x9ad8000
+p=0x9ad8000, size=492, end=0x9ad8f60, next=0x804e0a4
+second allocation of 952 bytes p=0x9ad8ba8
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x9ad8000
+p=0x9ad8000, size=372, end=0x9ad8ba0, next=0x804e0a4
+fourth allocation of 4792 bytes p=0x9ad9d48
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x9ad8000
+p=0x9ad8000, size=372, end=0x9ad8ba0, next=0x9ad9000
+p=0x9ad9000, size=424, end=0x9ad9d40, next=0x804e0a4
+first free of p=0x9ad8f68 
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x9ad8f60
+p=0x9ad8f60, size=20, end=0x9ad9000, next=0x9ad8000
+p=0x9ad8000, size=372, end=0x9ad8ba0, next=0x9ad9000
+p=0x9ad9000, size=424, end=0x9ad9d40, next=0x804e0a4
+second free of p=0x9ad9d48 
+p=0x804e0a4, size=0, end=0x804e0a4, next=0x9ad9d40
+p=0x9ad9d40, size=600, end=0x9adb000, next=0x9ad8f60
+p=0x9ad8f60, size=20, end=0x9ad9000, next=0x9ad8000
+p=0x9ad8000, size=372, end=0x9ad8ba0, next=0x9ad9000
+p=0x9ad9000, size=424, end=0x9ad9d40, next=0x804e0a4
+third free of p=0x9ad8ba8 p=0x804e0a4, size=0, end=0x804e0a4, next=0x9ad8ba0
+p=0x9ad8ba0, size=120, end=0x9ad8f60, next=0x9ad9d40
+p=0x9ad9d40, size=600, end=0x9adb000, next=0x9ad8f60
+p=0x9ad8f60, size=20, end=0x9ad9000, next=0x9ad8000
+p=0x9ad8000, size=372, end=0x9ad8ba0, next=0x9ad9000
+p=0x9ad9000, size=424, end=0x9ad9d40, next=0x804e0a4
+
+ Toatal number of Chunks in free list: 6
+Min Size: 0.00 Max Size: 4800.00 Average Size: 2048.000
+Total Memory in list: 12288
+Calls to sbrk: 2, Pages Requested: 2
+
+----- End unit test driver 1 -----

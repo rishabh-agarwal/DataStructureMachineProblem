@@ -1,0 +1,60 @@
+Prof. Harlan Russell
+ECE 223, MP1, Fall 2013
+test15 single replace in list when in middle and list not full no leak
+
+ADD 111
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+1
+ADD 100
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+2
+ADD 200
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+3
+ADD 111
+101
+201
+T
+WEP
+d
+2.4
+1
+1.3
+4
+STATS
+PRINT
+
+Output must be:
+/    Inserted: 111
+/    Inserted: 100
+/    Inserted: 200
+/    Updated: 111
+/    Number records: 3, Array size: 5
+/    3 records
+/    1: eth: 100, MIP: 100, AID: 200, Auth: F, Pri: WPA, ..., Time: 2
+/    2: eth: 111, MIP: 101, AID: 201, Auth: T, Pri: WEP, ..., Time: 4
+/    3: eth: 200, MIP: 100, AID: 200, Auth: F, Pri: WPA, ..., Time: 3
+/    Goodbye
+QUIT
+

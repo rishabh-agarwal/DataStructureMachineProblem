@@ -1,0 +1,747 @@
+Prof. Harlan Russell
+ECE 223, MP1, Fall 2013
+test14 random sequence of inputs.
+If run with list size of 34 all should pass
+If run with list size of 33 should find one rejected and one fail to remove
+Seed: 5
+ADD 204
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+0
+ADD 104
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+1
+ADD 703
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+2
+ADD 303
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+3
+ADD 603
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+4
+ADD 803
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+5
+ADD 503
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+6
+ADD 103
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+7
+ADD 203
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+8
+ADD 403
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+9
+ADD 802
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+10
+ADD 502
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+11
+ADD 702
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+12
+ADD 202
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+13
+ADD 402
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+14
+ADD 302
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+15
+ADD 102
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+16
+ADD 602
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+17
+ADD 301
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+18
+ADD 701
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+19
+ADD 201
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+20
+ADD 1101
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+21
+ADD 1501
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+22
+ADD 901
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+23
+ADD 1001
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+24
+ADD 501
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+25
+ADD 1601
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+26
+ADD 1201
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+27
+ADD 601
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+28
+ADD 1401
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+29
+ADD 401
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+30
+ADD 801
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+31
+ADD 1301
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+32
+ADD 101
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+33
+STATS
+DEL 202
+DEL 602
+DEL 502
+DEL 402
+DEL 802
+DEL 702
+DEL 102
+DEL 302
+DEL 1401
+DEL 301
+DEL 201
+DEL 901
+DEL 1001
+DEL 1601
+DEL 101
+DEL 801
+DEL 1101
+DEL 501
+DEL 1501
+DEL 401
+DEL 601
+DEL 701
+DEL 1301
+DEL 1201
+DEL 403
+DEL 703
+DEL 803
+DEL 203
+DEL 603
+DEL 303
+DEL 103
+DEL 503
+DEL 104
+DEL 204
+STATS
+ADD 1305
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+34
+ADD 2605
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+35
+ADD 2205
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+36
+ADD 505
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+37
+ADD 2305
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+38
+ADD 1805
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+39
+ADD 2905
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+40
+ADD 1005
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+41
+ADD 1705
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+42
+ADD 605
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+43
+ADD 1405
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+44
+ADD 1205
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+45
+ADD 305
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+46
+ADD 205
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+47
+ADD 3205
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+48
+ADD 705
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+49
+ADD 1105
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+50
+ADD 1905
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+51
+ADD 2505
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+52
+ADD 905
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+53
+ADD 2105
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+54
+ADD 405
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+55
+ADD 2405
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+56
+ADD 2705
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+57
+ADD 3105
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+58
+ADD 2805
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+59
+ADD 3005
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+60
+ADD 3305
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+61
+ADD 1505
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+62
+ADD 1605
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+63
+ADD 2005
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+64
+ADD 805
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+65
+ADD 105
+1
+2
+T
+WEP
+c
+2.4
+1
+1.1
+66
+DEL 805
+DEL 2005
+DEL 3205
+DEL 605
+DEL 1705
+DEL 2905
+DEL 1205
+DEL 2405
+DEL 1905
+DEL 3305
+DEL 1505
+DEL 2605
+DEL 305
+DEL 3005
+DEL 505
+DEL 2205
+DEL 905
+DEL 1005
+DEL 2305
+DEL 405
+DEL 2705
+DEL 105
+DEL 1805
+DEL 3105
+DEL 1105
+DEL 705
+DEL 2805
+DEL 2105
+DEL 2505
+DEL 1405
+DEL 205
+DEL 1605
+DEL 1305
+STATS
+QUIT

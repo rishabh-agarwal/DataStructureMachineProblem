@@ -1,0 +1,99 @@
+Seed: 341
+
+
+ ====== Unit Driver ======
+
+Inserting 14 items into tree
+Created tree for testing removes
+             56
+        48
+                       46
+                  44
+                       42
+             40
+   32
+                  28
+             24
+                  20
+        16
+                  12
+              8
+                   4
+Removing 7 items from tree
+ -- Test (0) about to remove key 12
+             56
+        48
+                       46
+                  44
+                       42
+             40
+   32
+                  28
+             24
+                  20
+        16
+              8
+                   4
+ -- Test (1) about to remove key 20
+             56
+        48
+                       46
+                  44
+                       42
+             40
+   32
+                  28
+             24
+        16
+              8
+                   4
+ -- Test (2) about to remove key 8
+             56
+        48
+                       46
+                  44
+                       42
+             40
+   32
+                  28
+             24
+        16
+              4
+ -- Test (3) about to remove key 24
+             56
+        48
+                       46
+                  44
+                       42
+             40
+   32
+             28
+        16
+              4
+ -- Test (4) about to remove key 40
+             56
+        48
+                  46
+             44
+                  42
+   32
+             28
+        16
+              4
+ -- Test (5) about to remove key 16
+             56
+        48
+                  46
+             44
+                  42
+   32
+        28
+              4
+ -- Test (6) about to remove key 48
+        56
+                  46
+             44
+                  42
+   32
+        28
+              4

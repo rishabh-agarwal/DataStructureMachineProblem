@@ -1,0 +1,282 @@
+Prof. Harlan Russell
+ECE 223, MP2, Fall 2013
+qtest10
+
+A test script to show a few simple tests for the del max.
+
+TEST 1:  Add 10 entries to queue with a run of 10's.  
+
+ADDTAIL 4
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+0
+ADDTAIL 10 
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+1
+ADDTAIL 10 
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+2
+ADDTAIL 10 
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+3
+ADDTAIL 6
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+4
+ADDTAIL 10 
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+5
+ADDTAIL 7 
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+6
+ADDTAIL 7 
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+7
+ADDTAIL 4 
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+8
+ADDTAIL 10
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+9
+PRINTQ
+DELMAX
+
+The output from longrun should be
+/      Added to tail 10 times
+/      Queue with 10 records
+/      Removed 5 copies of 10
+
+Clear queue
+
+DELHEAD
+DELHEAD
+DELHEAD
+DELHEAD
+DELHEAD
+DELHEAD
+DELHEAD
+DELHEAD
+DELHEAD
+DELHEAD
+PRINTQ
+
+Verify list is empty
+/      Removed from head 5 times
+/      Did not remove:   5 times 
+/      Queue empty
+
+TEST 2:  Add 10 entries to queue with a run of 4's, 9's and 7's.  
+
+ADDTAIL 4
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+0
+ADDTAIL 7 
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+1
+ADDTAIL 9 
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+2
+ADDTAIL 4 
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+3
+ADDTAIL 4
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+4
+ADDTAIL 4 
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+5
+ADDTAIL 7 
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+6
+ADDTAIL 7 
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+7
+ADDTAIL 7 
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+8
+ADDTAIL 9 
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+9
+PRINTQ
+DELMAX
+
+The output should be
+/      Added to tail 10 times
+/      Queue with 10 records
+/      Removed 2 copies of 9
+
+DELHEAD
+DELHEAD
+DELHEAD
+DELHEAD
+DELHEAD
+DELHEAD
+DELHEAD
+DELHEAD
+DELHEAD
+DELHEAD
+PRINTQ
+/      Removed from head 8 times
+/      Did not remove:   2 times 
+/      Queue empty
+
+TEST 3:  List with one item
+
+ADDTAIL 4
+100
+200
+F
+WPA
+c
+2.4
+1
+1.3
+0
+DELMAX
+PRINTQ
+
+The output should be
+/    Added to tail: 4
+/    Removed 1 copies of 4
+/    Queue empty
+
+QUIT
+

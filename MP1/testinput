@@ -1,0 +1,119 @@
+Prof. Harlan Russell
+ECE 223, MP1, Fall 2013
+testintput
+
+A test script to show a few simple tests for the sequential list ADT.
+This is an example of a start to a test plan.  These tests are very incomplete.
+
+Assumptions: these tests are designed with a list size of 3.  Also try the
+script with larger and smaller sizes for the list.
+
+TEST 1:  Add three entries to list.  
+
+ADD 111
+100
+200
+T
+WEP
+b
+2.4
+2
+54.2
+1
+ADD 551 
+500
+200
+F
+WPA
+c
+2.4
+1
+1.3
+2
+ADD 100 
+111
+200
+T
+WEP
+a
+5.0
+3
+11.1
+3
+
+To determine if test 1 passes look for three "Inserted" messages
+
+TEST 2: Print the list and verify three entries are sorted 
+
+PRINT
+STATS
+
+To deterine if test 2 passes list should be printed in order with 3 records.
+Also, stats shoudl show 3 records with an array size of 3
+
+TEST 3:  Update the 111 entry in the list
+
+ADD 111
+101
+201
+F
+WPA2
+d
+2.4
+4
+54.4
+4
+
+To determine if test 4 passes look for "Updated" message
+
+TEST 4: Print the list, verify entry for 111 replaced
+
+PRINT
+STATS
+
+To determine if test 4 passes look for 3 records, and 111 record should be 
+updated with Time as 4.  Stats should still be 3 records, size 3
+
+TEST 5: look for a record in the list and one not in list
+
+FIND 111
+FIND 112
+
+To determine if test 5 passes should print record 111 with time 4, and
+should not find 112
+
+TEST 6:  Attempt to add fourth record. If list size is 3 then add will be rejected 
+
+ADD 222
+333
+202
+T
+WEP
+f
+3.3
+9
+10.222
+5
+PRINT
+STATS
+
+To check test 6, look for Rejected if list size is three.  Print shows 3 old
+records Stats shows 3 records, array size 3.  If the program is run with a list
+size of 4 or larger then the add should be successful.
+
+TEST 7: Remove the last element in the list and try to remove an element 
+not in the list
+
+DEL 551
+DEL 552
+PRINT
+
+To verify test 7, should see removed 551, did not remove 552, and final list
+should be printed with 2 records.
+
+TEST 8: Quit
+
+QUIT
+
+to verify test 8, run with valgrind and confirm there are no memory leaks
+
